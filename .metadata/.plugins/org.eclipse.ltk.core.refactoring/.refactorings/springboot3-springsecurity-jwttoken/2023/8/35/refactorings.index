@@ -1,0 +1,13 @@
+1693212154060	Rename type 'UserInfoRepository'
+1693212192588	Rename package 'com.javatechie'
+1693212312722	Rename package 'com.javatechie.config'
+1693212350677	Rename package 'com.javatechie.controller'
+1693212371959	Rename package 'com.javatechie.dto'
+1693212392717	Rename package 'com.javatechie.entity'
+1693212410033	Rename package 'com.javatechie.filter'
+1693212427006	Rename package 'com.javatechie.repository'
+1693212442583	Rename package 'com.javatechie.service'
+1693215897349	Rename type 'JwtService'
+1693216022382	Rename type 'JwtAuthFilter'
+1693222949398	Rename type 'AuthController'
+1693226848849	Delete element

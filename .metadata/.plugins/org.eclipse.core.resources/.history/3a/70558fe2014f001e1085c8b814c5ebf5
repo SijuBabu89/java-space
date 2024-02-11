@@ -1,0 +1,14 @@
+package com.buddywindow.aop.advise;
+
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.Aspect;
+import org.springframework.stereotype.Component;
+
+@Aspect
+@Component
+public class LoggingAdvise {
+
+	public Object applicationLogger(ProceedingJoinPoint joinPoint) {
+		
+	}
+}

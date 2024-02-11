@@ -1,0 +1,15 @@
+package com.buddywindow.java8;
+
+import java.util.ArrayList;
+import java.util.stream.Stream;
+
+public class StreamAPI {
+
+	public static void main(String ar[]) {
+		ArrayList<String> strings = new ArrayList<String>();
+		strings.add("Hi");
+		strings.add("Hello");
+		strings.add("How Are You");
+		Stream<String> stringStream = strings.stream();
+	}
+}

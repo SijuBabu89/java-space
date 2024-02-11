@@ -1,0 +1,5 @@
+package com.buddywindow.aop.advise;
+
+public class LoggingAdvise {
+
+}

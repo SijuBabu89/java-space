@@ -1,0 +1,21 @@
+package com.buddywindow.aop.advise;
+
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.Aspect;
+import org.springframework.stereotype.Component;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+@Aspect
+@Component
+public class LoggingAdvise {
+
+	//ProceedingJoinPoint internally using reflection and we can get method name class name etc from this
+	public Object applicationLogger(ProceedingJoinPoint joinPoint) throws Throwable {
+		ObjectMapper mapper = new ObjectMapper();
+		String methodName = joinPoint.getSignature().getName();
+		String className = joinPoint.getTarget().getClass().toString();
+		Object[] array = joinPoint.getArgs();
+		Object obj = joinPoint.proceed();
+	}
+}

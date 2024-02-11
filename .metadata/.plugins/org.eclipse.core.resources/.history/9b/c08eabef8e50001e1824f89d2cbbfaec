@@ -1,0 +1,11 @@
+package com.buddywindow.stream;
+
+import java.util.Arrays;
+import java.util.List;
+
+public class StreamAPI {
+
+	public static void main(String ar[]) {
+		List<String> strings = Arrays.asList("Siju", "Babu", "Sanu", "SS");
+	}
+}

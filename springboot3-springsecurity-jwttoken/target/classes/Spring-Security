@@ -1,0 +1,11 @@
+The incoming request will be handled by DelegatingFilterProxy, 
+and converts the request to authentication object.
+Since filter doesn't have any logic to authenticate the request, it pass the request to
+Authentication Manager.
+Authentication manager also doesn't know how to authenticate the request, so it passes the request 
+to authentication provider.  
+Spring has multiple authentication provider, and authentication manager cannot directly communicate
+with the authentication provider.
+So to talk with authentication provider, authentication manager passes the request to provider manager
+and the provider manager passes the request to appropriate authentication provider 
+by checking each authentication providers.

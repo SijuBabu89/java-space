@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;spring-boot3-jwt-main&apos; to &apos;springboot3-springsecurity-jwttoken&apos;" description="Rename resource &apos;spring-boot3-jwt-main&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/spring-boot3-jwt-main" name="springboot3-springsecurity-jwttoken" stamp="1693483649130" updateReferences="true"/>
+</session>

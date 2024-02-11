@@ -1,0 +1,32 @@
+package security;
+
+
+
+import org.springframework.security.web.util.matcher.*;
+import org.springframework.boot.autoconfigure.security.reactive.PathRequest;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.web.SecurityFilterChain;
+
+@Configuration
+@EnableWebSecurity
+public class WebSecurityConfig  {
+
+
+	 @Bean
+	 public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+		 
+		 http.securityMatcher("/api/**").authorizeHttpRequests(rmr -> rmr
+		            .requestMatchers("/api/admin/**").hasRole(Role.ADMIN.name())
+		            .requestMatchers("/api/**").authenticated()
+		    ).httpBasic(httpbc -> httpbc
+		            .authenticationEntryPoint(authenticationEntryPoint)
+		    ).sessionManagement(smc -> smc
+		            .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+		    ).csrf(AbstractHttpConfigurer::disable);
+		    return http.build();
+	 }
+
+}

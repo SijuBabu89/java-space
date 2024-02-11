@@ -1,0 +1,8 @@
+package com.buddywindow.datastructure;
+
+public class LinkedListExample {
+
+	public static void main(String ar[]) {
+		
+	}
+}

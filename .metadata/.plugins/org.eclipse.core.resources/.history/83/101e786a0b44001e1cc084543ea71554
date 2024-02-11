@@ -1,0 +1,35 @@
+package security;
+
+
+
+import org.springframework.security.web.util.matcher.*;
+import org.springframework.boot.autoconfigure.security.reactive.PathRequest;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.web.SecurityFilterChain;
+
+@Configuration
+@EnableWebSecurity
+public class WebSecurityConfig  {
+
+
+	 @Bean
+	 public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+		 
+		 http.authorizeHttpRequests().requestMatchers("/Admin/**").hasRole("ADMIN")
+		    .requestMatchers("/user/**").hasRole("USER")
+		    .requestMatchers("/**").permitAll().and().formLogin().and().csrf().disable();
+
+	     // The following code is deprecated in Spring Security 6.0
+	     // .and().authorizeRequests().antMatchers("/h2/**").permitAll();
+
+	     // The following code is also deprecated in Spring Security 6.0
+	     // http.csrf().disable();
+	     // http.headers().frameOptions().disable();
+
+	     return http.build();
+	 }
+
+}

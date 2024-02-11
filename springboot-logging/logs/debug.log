@@ -1,0 +1,8 @@
+2023-09-09 16:00:39 [http-nio-8080-exec-2] DEBUG c.b.resources.BuddywindowResources -
+				User name is siju
+2023-09-09 16:00:39 [http-nio-8080-exec-2] DEBUG c.b.resources.BuddywindowResources -
+				The response is Hi siju, Welcome to buddywindow application
+2023-09-09 16:00:51 [http-nio-8080-exec-7] DEBUG c.b.resources.BuddywindowResources -
+				User name is siju
+2023-09-09 16:00:51 [http-nio-8080-exec-7] DEBUG c.b.resources.BuddywindowResources -
+				The response is Hi siju, Welcome to buddywindow application
